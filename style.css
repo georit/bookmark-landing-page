@@ -1,0 +1,25 @@
+/* *****custom variables***** */
+:root {
+  /* ***primary colors*** */
+  --soft-blue: hsl(231, 69%, 60%);
+  --soft-red: hsl(0, 94%, 66%);
+
+  /* ***neutral colors*** */
+  --grayish-blue: hsl(229, 8%, 60%);
+  --very-dark-blue: hsl(229, 31%, 21%);
+
+  /* ***fonts*** */
+  --rubik: "Rubik", sans-serif;
+}
+
+/* *****general styles***** */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--rubik);
+  font-size: 18px;
+  min-width: 100vw;
+  min-height: 100vh;
+}
