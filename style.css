@@ -55,7 +55,7 @@ a.btn {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .scroll {
@@ -85,7 +85,6 @@ h3.section-heading:first-letter {
 
 /* *****main navigation***** */
 nav.main-nav {
-  /*background-color: transparent;*/
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -94,9 +93,13 @@ nav.main-nav {
 }
 
 .main-nav-expanded {
-  background-color: hsla(229, 31%, 21%, 0.9);
+  background-color: hsla(229, 31%, 21%, 0.97);
   height: 100vh;
   align-items: flex-start !important;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 99;
 }
 
 .mobile-nav-toggle {
@@ -112,7 +115,6 @@ nav.main-nav ul.nav-links {
   justify-content: center;
   align-items: center;
   width: 100%;
-  /*margin-top: -288px;*/
   height: max-content;
 }
 
@@ -138,7 +140,7 @@ nav.main-nav li.nav-link:last-child a {
 }
 
 nav.main-nav li.nav-link:nth-child(3) {
-  border-bottom: 1px solid var(--grayish-blue);
+  border-bottom: 1px solid hsla(229, 8%, 60%, 0.3);
 }
 
 nav.main-nav li.nav-link:last-child {
@@ -167,7 +169,7 @@ nav.main-nav div.social-media i:first-child {
 
 nav.main-nav ul.nav-links,
 nav.main-nav div.social-media {
-  display: none;
+  /*display: none;*/
 }
 
 /* *****hero***** */
