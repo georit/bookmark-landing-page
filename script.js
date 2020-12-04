@@ -22,6 +22,12 @@ const tabTitlesAfter = Array.from(
 // faqs
 const questions = document.querySelector(".questions");
 
+//email
+const emailInput = document.getElementById("email");
+const btnSubmitEmail = document.getElementById("email-submit");
+const exclamationMark = document.getElementById("exclamation-mark");
+const errorMsg = document.getElementById("email-error");
+
 /* *****onload***** */
 displayFeatureDetails("tab1");
 
@@ -129,6 +135,12 @@ function displayFaqAnswer(id) {
   document.getElementById(`icon-${id}`).classList.add("expanded");
 }
 
+// validate email address
+function validateEmail(email) {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
+
 /* *****event listeners******/
 // toggle mobile navigation
 mobileNavToggle.addEventListener("click", () => {
@@ -181,5 +193,35 @@ questions.addEventListener("click", (e) => {
   if (qsnClass.length === 16) {
     let qsnClass2 = qsnClass.slice(9, 16);
     displayFaqAnswer(qsnClass2);
+  }
+});
+
+//validate email address
+btnSubmitEmail.addEventListener("click", (e) => {
+  e.preventDefault();
+  let emailAddress = emailInput.value;
+  console.log(emailAddress);
+  if (validateEmail(emailAddress)) {
+    // add green border to email input & add bottom border radii
+    emailInput.style.border = "2px solid hsl(102,57%,38%)";
+    emailInput.style.borderBottomLeftRadius = "5px";
+    emailInput.style.borderBottomRightRadius = "5px";
+
+    // display checkmark & hide error message
+    exclamationMark.style.display = "flex";
+    exclamationMark.style.backgroundColor = "hsl(102,57%,38%)";
+    exclamationMark.innerHTML = "&#x2714;";
+    errorMsg.style.display = "none";
+  } else {
+    // add red border to email input & remove bottom border radii
+    emailInput.style.border = "2px solid hsl(0, 94%, 66%)";
+    emailInput.style.borderBottomLeftRadius = "0";
+    emailInput.style.borderBottomRightRadius = "0";
+
+    // display error message & exclamation mark
+    exclamationMark.style.display = "flex";
+    exclamationMark.style.backgroundColor = "hsl(0, 94%, 66%)";
+    exclamationMark.innerHTML = "!";
+    errorMsg.style.display = "block";
   }
 });

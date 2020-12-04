@@ -462,6 +462,8 @@ div.exclamation-mark {
 }
 
 p.email-error {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   font-size: 0.7rem;
   font-style: italic;
   padding: 0.2rem 0.4rem;
@@ -480,6 +482,11 @@ button.email-submit {
   border-radius: 5px;
   font-size: 1rem;
   padding: 0.8rem 1rem;
+}
+
+input#email:focus,
+button.email-submit:focus {
+  outline: none;
 }
 
 input#email {
