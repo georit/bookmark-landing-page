@@ -91,6 +91,32 @@ function displayFeatureDetails(id) {
 
 // expand faqs on click
 function displayFaqAnswer(id) {
+  // collapse all faqs
+  let expandedFaqs = Array.from(document.querySelectorAll(".expanded"));
+
+  expandedFaqs.forEach((expandedFaq) => {
+    if (
+      expandedFaq.id === "icon-expand1" ||
+      expandedFaq.id === "icon-expand2" ||
+      expandedFaq.id === "icon-expand3" ||
+      expandedFaq.id === "icon-expand4"
+    ) {
+      // change icon type & icon color
+      expandedFaq.style.color = "hsl(231, 69%, 60%)";
+      expandedFaq.className = `fas fa-chevron-down ${id}`;
+    }
+
+    if (
+      expandedFaq.id === "expand1" ||
+      expandedFaq.id === "expand2" ||
+      expandedFaq.id === "expand3" ||
+      expandedFaq.id === "expand4"
+    ) {
+      // hide answer
+      expandedFaq.style.display = "none";
+    }
+  });
+
   // display answer
   document.getElementById(id).style.display = "block";
 
@@ -138,32 +164,6 @@ tabsContainer.addEventListener("click", (e) => {
 
 // display faqs answers
 questions.addEventListener("click", (e) => {
-  // collapse all faqs
-  let expandedFaqs = Array.from(document.querySelectorAll(".expanded"));
-
-  expandedFaqs.forEach((expandedFaq) => {
-    if (
-      expandedFaq.id === "icon-expand1" ||
-      expandedFaq.id === "icon-expand2" ||
-      expandedFaq.id === "icon-expand3" ||
-      expandedFaq.id === "icon-expand4"
-    ) {
-      // change icon type & icon color
-      expandedFaq.style.color = "hsl(231, 69%, 60%)";
-      expandedFaq.className = "fas fa-chevron-down expand1";
-    }
-
-    if (
-      expandedFaq.id === "expand1" ||
-      expandedFaq.id === "expand2" ||
-      expandedFaq.id === "expand3" ||
-      expandedFaq.id === "expand4"
-    ) {
-      // hide answer
-      expandedFaq.style.display = "none";
-    }
-  });
-
   // expand clicked faq
   let targetEl = e.target;
   let qsnClass = targetEl.className;
