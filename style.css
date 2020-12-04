@@ -249,33 +249,35 @@ div.tab-headings {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  padding-bottom: 3rem;
+  padding-bottom: 4.5rem;
+}
+
+div.tab-title-container {
+  border-bottom: 1px solid hsla(229, 8%, 60%, 0.3);
+  width: 100%;
 }
 
 h4.tab-title {
-  border-bottom: 1px solid hsla(229, 8%, 60%, 0.3);
   width: 100%;
   font-weight: 400;
   font-size: 1.2rem;
   text-transform: capitalize;
   padding: 1rem 0;
-  position: relative;
   cursor: pointer;
 }
 
-h4.tab-title:first-child {
+div.tab-title-container:first-child {
   border-top: 1px solid hsla(229, 8%, 60%, 0.3);
 }
 
-h4.tab-title:after {
-  content: "";
+div.tab-title-after {
   background-color: var(--soft-red);
-  height: 4px;
-  width: 45%;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  border-radius: 5px;
+  height: 3px;
+  width: 150px;
+  margin: 0 auto;
+  display: none;
+  transition: all 0.3s ease;
 }
 
 div.feature,

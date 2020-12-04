@@ -9,20 +9,6 @@ Users should be able to:
 - Receive an error message when the newsletter form is submitted if:
   - The input field is empty
   - The email address is not formatted correctly
-
-
-
   
-Intelligent search
-
-Our powerful search feature will help you find saved sites in no time at all.
-No need to trawl through all of your bookmarks.
-
-
-
-Share your bookmarks
-
-Easily share your bookmarks and collections with others. Create a shareable
-link that you can send at the click of a button.
 
 
