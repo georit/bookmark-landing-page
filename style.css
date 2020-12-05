@@ -544,7 +544,17 @@ footer div.social-media i:first-child {
 }
 
 /* *****media queries***** */
-@media screen and (min-width: 1430px) {
+@media screen and (min-width: 655px) {
+  div.hero-img-container {
+    text-align: center;
+  }
+  div.bg-hero {
+    padding-top: 328px;
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
   /* *****general styles***** */
   .hero-tx,
   .section {
@@ -764,7 +774,7 @@ footer div.social-media i:first-child {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-start;
-    width: 65%;
+    width: 70%;
     margin: 0 auto;
   }
 
@@ -787,6 +797,17 @@ footer div.social-media i:first-child {
     margin-top: 4rem;
   }
 
+  a.btn-install {
+    border: 2px solid transparent;
+    transition: all 0.3s;
+  }
+
+  a.btn-install:hover {
+    background-color: var(--white);
+    border: 2px solid var(--soft-blue);
+    color: var(--soft-blue);
+  }
+
   /* *****FAQs section***** */
   div.question h5 {
     transition: all 0.3s;
@@ -806,25 +827,44 @@ footer div.social-media i:first-child {
   section.section-contact {
     background-color: var(--soft-blue);
     color: var(--white);
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 1rem;
     padding: 3rem 35%;
     text-align: center;
   }
 
+  p.user-count {
+    grid-area: 1 / 1 / auto / span 3;
+  }
+
   section.section-contact h3 {
+    grid-area: 2 / 1 / auto / span 3;
     font-size: 1.8rem;
   }
 
-  input#email {
+  div.email-signup {
+    grid-area: 3 / 1 / auto / span 2;
+  }
+
+  div.co input#email {
     display: block;
     width: 100%;
   }
 
   button.email-submit {
-    width: max-content;
-    display: block;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    margin-left: auto;
+    border: 2px solid transparent;
+    grid-area: 3 / 3 / 4 / span 1;
+    height: max-content;
+    padding: 0.8rem 1rem;
+    transition: all 0.3s;
+  }
+
+  button.email-submit:hover {
+    background-color: var(--white);
+    color: var(--soft-red);
+    border: 2px solid var(--soft-red);
   }
 
   /* *****footer***** */
