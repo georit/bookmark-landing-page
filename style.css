@@ -342,7 +342,7 @@ div.extension {
   background-color: var(--white);
   border-radius: 10px;
   box-shadow: 0 4px 8px hsl(229, 22%, 90%);
-  padding: 1rem 1rem 2rem;
+  padding: 1rem 0 2rem;
   margin-top: 2.5rem;
   width: 80%;
   max-width: 300px;
@@ -370,7 +370,7 @@ p.extension-reqs:first-letter {
 }
 
 a.btn-install {
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 1rem;
   text-transform: capitalize;
 }
 
@@ -554,7 +554,7 @@ footer div.social-media i:first-child {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 900px) {
   /* *****general styles***** */
   .hero-tx,
   .section {
@@ -643,6 +643,11 @@ footer div.social-media i:first-child {
     padding: 2rem 0 6rem;
   }
 
+  div.bg-hero {
+    padding-top: 50%;
+    width: 80%;
+  }
+
   div.hero-tx {
     order: -1;
   }
@@ -696,7 +701,7 @@ footer div.social-media i:first-child {
     padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
-    width: 40%;
+    width: 60%;
     margin: 0 auto;
     border-bottom: 1px solid hsla(229, 8%, 60%, 0.3);
   }
@@ -771,7 +776,7 @@ footer div.social-media i:first-child {
 
   div.extensions {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
     width: 70%;
@@ -779,22 +784,7 @@ footer div.social-media i:first-child {
   }
 
   div.extension {
-    background-color: var(--white);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px hsl(229, 22%, 90%);
-    padding: 1rem 1rem 2rem;
-    margin-top: 0;
-    width: 80%;
-    max-width: 300px;
     text-align: center;
-  }
-
-  div.extension:nth-child(2) {
-    margin-top: 2rem;
-  }
-
-  div.extension:last-child {
-    margin-top: 4rem;
   }
 
   a.btn-install {
@@ -831,7 +821,7 @@ footer div.social-media i:first-child {
     grid-template-rows: auto;
     grid-template-columns: repeat(3, 1fr);
     gap: 0 1rem;
-    padding: 3rem 35%;
+    padding: 3rem 25%;
     text-align: center;
   }
 
@@ -873,8 +863,8 @@ footer div.social-media i:first-child {
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 12%;
-    padding-right: 12%;
+    padding-left: 6%;
+    padding-right: 6%;
   }
 
   svg.footer-logo {
@@ -911,5 +901,46 @@ footer div.social-media i:first-child {
   footer li.nav-link a:hover,
   footer div.social-media i:hover {
     color: var(--soft-red);
+  }
+}
+
+@media screen and (min-width: 1430px) {
+  div.tab-headings {
+    width: 40%;
+  }
+
+  div.extensions {
+    width: 70%;
+  }
+
+  div.extension {
+    margin-top: 0;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  div.extension:nth-child(2) {
+    margin-top: 2rem;
+  }
+
+  div.extension:last-child {
+    margin-top: 4rem;
+  }
+
+  section.section-contact {
+    background-color: var(--soft-blue);
+    color: var(--white);
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 1rem;
+    padding: 3rem 35%;
+    text-align: center;
+  }
+
+  footer {
+    padding-left: 12%;
+    padding-right: 12%;
   }
 }
